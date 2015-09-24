@@ -66,6 +66,7 @@ if !using_system_lasem?
   # SHOULD BE DYNAMICALLY LINKED for potential LGPL copyright issues
   Dir.chdir(LASEM_BUILD_DIR) do
     system 'cmake ../..'
+    system '../autogen.sh'
     system 'make'
   end
   FileUtils.mkdir_p(LASEM_LIB_DIR)
